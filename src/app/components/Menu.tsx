@@ -24,6 +24,7 @@ export function Menu() {
           className="mx-auto h-[35px] w-auto md:h-[48px]"
         />
       </Link>
+
       {email && (
         <button className="absolute inset-y-0 right-[30px] hidden text-300-regular md:flex md:items-center">
           <span className="text-primary">{email}</span>
@@ -40,7 +41,7 @@ export function Menu() {
       {!email && (
         <Link
           href="/login"
-          className="rounded-lg bg-action p-4 text-white hover:bg-action-light"
+          className="flex max-h-10 items-center rounded-lg bg-action p-4 text-300-regular text-white hover:bg-action-light"
         >
           Log in or Sign up
         </Link>

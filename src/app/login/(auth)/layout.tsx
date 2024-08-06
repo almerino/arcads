@@ -1,6 +1,7 @@
-import type { Metadata } from "next"
+import { Suspense } from "react"
 
 import { Menu } from "../../components/Menu"
+import { MenuFallback } from "../../components/MenuFallback"
 
 export default function RootLayout({
   children,
@@ -9,7 +10,9 @@ export default function RootLayout({
 }>) {
   return (
     <>
-      <Menu />
+      <Suspense fallback={<MenuFallback />}>
+        <Menu />
+      </Suspense>
       {children}
     </>
   )

@@ -2,7 +2,7 @@
 
 import { redirect } from "next/navigation"
 
-import { signIn } from "@/auth"
+// import { signIn } from "@/auth"
 
 export async function authenticate(formData: FormData) {
   let redirectPath = ""

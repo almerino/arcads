@@ -10,7 +10,7 @@ export default function LoginForm() {
         <SignIn />
       </div>
       <div className="mt-[44px] text-center text-300-regular text-secondary">
-        <span>By clicking &quot;Continue&quot;, you agree to our </span>
+        {'By clicking "Continue", you agree to our '}
         <Link
           href="https://www.arcads.ai/terms"
           className="underline hover:text-primary"
@@ -18,7 +18,7 @@ export default function LoginForm() {
         >
           Terms of Use
         </Link>
-        <span> & </span>
+        {" & "}
         <Link
           href="https://www.arcads.ai/privacy"
           className="underline hover:text-primary"
