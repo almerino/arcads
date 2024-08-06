@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from "react"
 
 export default function VideoPlayer() {
   const videoRef = useRef<HTMLVideoElement>(null)
-  const [muted, setMuted] = useState(false)
+  const [muted, setMuted] = useState(true)
 
   const handleMute = () => {
     if (videoRef.current) {
@@ -32,6 +32,7 @@ export default function VideoPlayer() {
         autoPlay
         loop
         playsInline
+        muted
       >
         <source src="/login/login-video.mp4" type="video/mp4" />
         Your browser does not support the video tag.

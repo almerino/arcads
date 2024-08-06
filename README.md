@@ -52,3 +52,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 - Email color is different on sign in/sign up
 - Link on the arcads icon ?
 - Design of sign in/sign up seems to be inverted
+- I defaulted the video to muted as modern browsers block the autoplay of videos if videos are not muted
