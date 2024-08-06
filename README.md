@@ -34,3 +34,21 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## Feedback
+
+- How to handle the errors?
+  - Feedback on the email?
+- Use more standard spacing, avoid as most as possible random spacing.
+- Tokens for the colors and common style we reuse
+- Maybe align blocks on the center?
+- Validate email, should we use a validator library?
+- Missing link hover state style
+- A base for all colors, font, spacing and base compoonent would be super nice.
+- Translate system to put in place
+- Better token naming
+- Missing email/login in menu for mobile
+- verify-email should be real svg
+- Email color is different on sign in/sign up
+- Link on the arcads icon ?
+- Design of sign in/sign up seems to be inverted
