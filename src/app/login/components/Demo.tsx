@@ -1,6 +1,6 @@
 import Image from "next/image"
 
-import { Avatar } from "@/src/app/ui/Avatar"
+import { Avatar } from "@/ui/Avatar"
 import { Suspense } from "react"
 import VideoPlayer from "./VideoPlayer"
 

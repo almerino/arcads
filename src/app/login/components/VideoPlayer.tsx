@@ -22,7 +22,10 @@ export default function VideoPlayer() {
   }, [])
 
   return (
-    <div className="relative mx-[45px] mt-[35px] max-w-[275px] md:mx-0">
+    <div
+      className="relative mx-[45px] mt-[35px] max-w-[275px] md:mx-0"
+      data-testid="video"
+    >
       <video
         ref={videoRef}
         className="ml-[5px] aspect-9/16 rounded-lg bg-black"
@@ -46,7 +49,7 @@ export default function VideoPlayer() {
           src={muted ? "/login/sound-off.svg" : "/login/sound-on.svg"}
           width={30}
           height={30}
-          alt={muted ? "mute video" : "unmute video"}
+          alt={muted ? "unmute video" : "mute video"}
         />
       </button>
 

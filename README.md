@@ -53,3 +53,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 - Link on the arcads icon ?
 - Design of sign in/sign up seems to be inverted
 - I defaulted the video to muted as modern browsers block the autoplay of videos if videos are not muted
+- I avoided form action as it seems too early and might be a bit immature (only available with next but not with tests unless using react canary)

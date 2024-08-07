@@ -9,9 +9,7 @@ export default function SignIn({
 
   return (
     <div className="mt-[19px] flex flex-col items-center md:mt-[78px]">
-      <div className="text-600-semibold md:text-700-bold">
-        Verify your Email
-      </div>
+      <h1 className="text-600-semibold md:text-700-bold">Verify your Email</h1>
       <Image
         src="/login/email-verify.svg"
         width={370}

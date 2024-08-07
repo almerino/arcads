@@ -8,6 +8,8 @@ export default function Home() {
       <Suspense fallback={<MenuFallback />}>
         <Menu />
       </Suspense>
+
+      <h1 className="text-700-bold">Welcome to arcads technical test</h1>
     </main>
   )
 }

@@ -12,7 +12,7 @@ export function Avatar({
       src={src}
       width={40}
       height={40}
-      alt=""
+      alt="avatar"
       className={`${className} size-[43px] rounded-full border-[3px] border-[#CECBFF]`}
     />
   )
