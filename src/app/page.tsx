@@ -2,7 +2,11 @@ import { Suspense } from "react"
 import { Menu } from "./components/Menu"
 import { MenuFallback } from "./components/MenuFallback"
 
-export default function Home() {
+import { auth } from "@/auth"
+
+export default async function Home() {
+  const session = await auth()
+
   return (
     <main className="flex size-full flex-col">
       <Suspense fallback={<MenuFallback />}>
@@ -39,6 +43,10 @@ export default function Home() {
           </li>
           <li>You will be redirect to the sign up page</li>
         </ul>
+      </div>
+
+      <div className="mt-8">
+        Authentication status: {session ? "authenticated" : "unauthenticated"}
       </div>
     </main>
   )

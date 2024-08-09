@@ -1,10 +1,6 @@
-import { auth } from "@/auth"
 import Image from "next/image"
 
-export default async function SignIn(props) {
-  const session = await auth()
-  console.log("===SESSIOn===========", session)
-  // const email = searchParams["email"]
+export default async function SignIn() {
   const email = ""
 
   return (

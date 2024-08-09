@@ -4,21 +4,13 @@ import { AuthError } from "next-auth"
 import { signIn } from "@/auth"
 
 export async function authenticate(formData: FormData) {
-  let redirectPath = ""
-
   try {
     const email = formData.get("email") as string
-
-    if (email.includes("@arcads.ai")) {
-      redirectPath = `/login/signin?email=${email}`
-    } else {
-      redirectPath = `/login/signup?email=${email}`
-    }
 
     await signIn("nodemailer", {
       email,
       redirect: true,
-      callbackUrl: "/",
+      redirectTo: "/",
     })
   } catch (error: any) {
     // Signin can fail for a number of reasons, such as the user
