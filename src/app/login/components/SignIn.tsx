@@ -8,7 +8,7 @@ import { ChangeEvent, FormEvent, useState } from "react"
 const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i
 
 export function SignIn() {
-  const [email, setEmail] = useState("dadadad@gmail.com")
+  const [email, setEmail] = useState("")
   const [valid, setValid] = useState(false)
   const router = useRouter()
 

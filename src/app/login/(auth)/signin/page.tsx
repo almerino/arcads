@@ -15,7 +15,7 @@ export default function SignIn({
         width={370}
         height={370}
         alt=""
-        className="mt-8 h-[270px] w-auto md:h-[370px]"
+        className="mt-8 aspect-square size-[270px] md:size-[370px]"
       />
       <div className="mt-8 text-center text-400-regular text-secondary">
         <div>

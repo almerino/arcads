@@ -33,7 +33,7 @@ export function Menu() {
             width={14}
             height={14}
             alt=""
-            className="ml-2 text-secondary"
+            className="ml-2 size-[14px] text-secondary"
           />
         </button>
       )}
