@@ -1,11 +1,11 @@
+import { auth } from "@/auth"
 import Image from "next/image"
 
-export default function SignIn({
-  searchParams = {},
-}: {
-  searchParams?: { [key: string]: string | string[] | undefined }
-}) {
-  const email = searchParams["email"]
+export default async function SignIn(props) {
+  const session = await auth()
+  console.log("===SESSIOn===========", session)
+  // const email = searchParams["email"]
+  const email = ""
 
   return (
     <div className="mt-[19px] flex flex-col items-center md:mt-[78px]">

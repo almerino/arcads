@@ -18,7 +18,8 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/app/*"]
+      "@/*": ["./src/app/*"],
+      "@/auth": ["./auth.ts"]
     },
     "types": ["vitest/globals"]
   },

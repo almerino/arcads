@@ -1,16 +1,14 @@
 "use client"
 
-import { useRouter } from "next/navigation"
-import { ChangeEvent, FormEvent, useState } from "react"
+import { ChangeEvent, useState } from "react"
 
-// import { authenticate } from "@/lib/actions"
+import { authenticate } from "@/lib/actions"
 
 const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i
 
 export function SignIn() {
   const [email, setEmail] = useState("")
   const [valid, setValid] = useState(false)
-  const router = useRouter()
 
   const handleChangeEmail = (e: ChangeEvent<HTMLInputElement>) => {
     const email = e.target.value
@@ -19,21 +17,10 @@ export function SignIn() {
     setValid(emailRegex.test(email))
   }
 
-  const handleSubmit = (e: FormEvent) => {
-    e.preventDefault()
-
-    let path = email.includes("@arcads.ai")
-      ? `/login/signin?email=${email}`
-      : `/login/signup?email=${email}`
-
-    router.push(path)
-  }
-
   return (
     <form
-      // action={authenticate}
+      action={authenticate}
       className="mt-8 flex w-full flex-col text-primary"
-      onSubmit={handleSubmit}
     >
       <label htmlFor="email" className="text-400-regular">
         Email (required)

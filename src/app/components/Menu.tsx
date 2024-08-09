@@ -1,13 +1,11 @@
-"use client"
-
 import Image from "next/image"
 import Link from "next/link"
-import { useSearchParams } from "next/navigation"
 
-export function Menu() {
-  const searchParams = useSearchParams()
+import { auth, signOut } from "@/auth"
 
-  const email = searchParams.get("email")
+export async function Menu() {
+  const session = await auth()
+  const email = session?.user?.email
 
   return (
     <div
@@ -26,16 +24,27 @@ export function Menu() {
       </Link>
 
       {email && (
-        <button className="absolute inset-y-0 right-[30px] hidden text-300-regular md:flex md:items-center">
-          <span className="text-primary">{email}</span>
-          <Image
-            src="/login/carret.svg"
-            width={14}
-            height={14}
-            alt=""
-            className="ml-2 size-[14px] text-secondary"
-          />
-        </button>
+        <div className="absolute inset-y-0 right-[30px] hidden text-300-regular md:flex md:items-center">
+          <div className="group relative flex h-7 items-center">
+            <span className="text-primary">{email}</span>
+            <Image
+              src="/login/carret.svg"
+              width={14}
+              height={14}
+              alt=""
+              className="ml-2 text-secondary"
+            />
+            <form
+              action={async () => {
+                "use server"
+                await signOut()
+              }}
+              className="absolute top-7 hidden w-full rounded-lg bg-white p-2 shadow-md group-hover:block"
+            >
+              <button type="submit">Sign Out</button>
+            </form>
+          </div>
+        </div>
       )}
 
       {!email && (
