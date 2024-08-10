@@ -5,6 +5,7 @@ import { auth, signOut } from "@/auth"
 
 export async function Menu() {
   const session = await auth()
+
   const email = session?.user?.email
 
   return (

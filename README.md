@@ -41,6 +41,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
   - Feedback on the email?
 - Use more standard spacing, avoid as most as possible random spacing.
 - Tokens for the colors and common style we reuse
+- Implementation of a design system or use library such as antd?
 - Maybe align blocks on the center?
 - Validate email, should we use a validator library?
 - Missing link hover state style
@@ -48,9 +49,8 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 - Translate system to put in place
 - Better token naming
 - Missing email/login in menu for mobile
-- verify-email should be real svg
+- verify-email should be a real svg
 - Email color is different on sign in/sign up
 - Link on the arcads icon ?
 - Design of sign in/sign up seems to be inverted
 - I defaulted the video to muted as modern browsers block the autoplay of videos if videos are not muted
-- I avoided form action as it seems too early and might be a bit immature (only available with next but not with tests unless using react canary)

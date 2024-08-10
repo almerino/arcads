@@ -21,4 +21,18 @@ beforeAll(() => {
       useSearchParams,
     }
   })
+
+  vi.mock("next-auth/react")
+  vi.mock("next-auth/providers/nodemailer", () => {
+    return {
+      default: vi.fn(),
+    }
+  })
+
+  vi.mock("@/auth", () => {
+    return {
+      auth: vi.fn(),
+      signOut: vi.fn(),
+    }
+  })
 })

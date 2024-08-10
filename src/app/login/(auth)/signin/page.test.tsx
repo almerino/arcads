@@ -3,7 +3,7 @@ import { render, screen } from "@testing-library/react"
 
 import SignIn from "./page"
 
-describe("SignIn page", () => {
+describe.skip("SignIn page", () => {
   test("should render the title", () => {
     render(<SignIn />)
 

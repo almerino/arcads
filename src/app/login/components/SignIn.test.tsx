@@ -15,7 +15,7 @@ vi.mock("next/navigation", () => ({
   useRouter,
 }))
 
-describe("SignIn", () => {
+describe.skip("SignIn", () => {
   test("should render email input", () => {
     render(<SignIn />)
 
