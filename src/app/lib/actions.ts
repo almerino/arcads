@@ -2,6 +2,8 @@
 
 import { AuthError } from "next-auth"
 import { signIn } from "@/auth"
+import { redirect } from "next/navigation"
+import { neon } from "@neondatabase/serverless"
 
 export async function authenticate(formData: FormData) {
   try {
@@ -9,9 +11,20 @@ export async function authenticate(formData: FormData) {
 
     await signIn("nodemailer", {
       email,
-      redirect: true,
+      redirect: false,
       redirectTo: "/",
+      callbackUrl: "/",
     })
+
+    const sql = neon(`${process.env.DATABASE_URL}`)
+
+    const user = await sql(`SELECT * FROM USERS where email = '${email}'`)
+
+    if (user.length) {
+      redirect(`/login/signin?email=${email}`)
+    } else {
+      redirect(`/login/signup?email=${email}`)
+    }
   } catch (error: any) {
     // Signin can fail for a number of reasons, such as the user
     // not existing, or the user not having the correct role.
